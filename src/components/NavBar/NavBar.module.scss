@@ -1,0 +1,29 @@
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-left: 1em;
+    gap: 1em;
+  }
+  
+  .link {
+    text-decoration: none;
+    color: #5252fb;
+    &:visited {
+      color: #5252fb;
+    }
+    &:hover {
+      color: #f7bb4c;
+    }
+    &_active {
+      color: #52b7fb;
+      text-decoration: underline;
+      &:visited {
+        color: #52b7fb;
+      }
+      &:hover {
+        color: #f7bb4c;
+      }
+    }
+  }
+  
