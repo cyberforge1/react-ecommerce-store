@@ -1,0 +1,52 @@
+.container {
+    height: 40vh;
+    width: 100%;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden; // Added to hide the non-active slides
+    position: relative;
+}
+
+.carouselInner {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%; // Ensure this is here to manage layout correctly
+}
+
+.carouselItem {
+    flex: 0 0 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; // Center content within each slide
+    
+}
+
+.carouselItem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 40%;  // Moves the image up to show more of the top
+    display: block;
+  }
+
+.button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background-color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.button:first-child {
+    left: 0; // Ensures the "Prev" button is at the very left
+}
+
+.button:last-child {
+    right: 0; // Ensures the "Next" button is at the very right
+}

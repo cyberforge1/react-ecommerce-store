@@ -1,9 +1,11 @@
 .nav {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-around;
+    align-items: center;
     padding-left: 1em;
     gap: 1em;
+    height: 50px;
   }
   
   .link {

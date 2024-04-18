@@ -6,26 +6,33 @@ import ProductPage from '../../pages/ProductPage/ProductPage';
 
 
 const ProductLoader = () => {
-  const { id } = useParams();
-  const [product, setProduct] = useState(null);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
+    const { id } = useParams();
+    const [product, setProduct] = useState(null);
+    const [error, setError] = useState(null);
+    const [fetchStatus, setFetchStatus] = useState("");
+  
+    useEffect(() => {
+      setFetchStatus("LOADING");
       getProductById(id)
-          .then((productData) => {
-              setProduct(productData);
-          })
-          .catch((error) => {
-              setError(error);
-              console.error("Failed to fetch product:", error);
-          });
-  }, [id]);
+        .then((productData) => {
+          setFetchStatus("SUCCESS");
+          setProduct(productData);
+        })
+        .catch((error) => {
+          setFetchStatus("FAILED");
+          setError(error);
+        });
+    }, [id]);
+  
+  
+    return (
+      <>
+        {fetchStatus === "FAILED" && (
+          <Message severity="error" message={error.message} />
+        )}
+        {fetchStatus === "SUCCESS" && <ProductPage product={product} />}
+      </>
+    );
+  };
 
-  if (error) {
-      return <div>Error: {error.message}</div>; // Show error message
-  }
-
-  return <ProductPage product={product} />;
-};
-
-export default ProductLoader
+  export default ProductLoader;

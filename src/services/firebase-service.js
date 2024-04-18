@@ -30,3 +30,6 @@ import {
     console.log("Product data:", snapshot.data());
     return { id: snapshot.id, ...snapshot.data() };
   };
+
+
+  //const addProductToCard

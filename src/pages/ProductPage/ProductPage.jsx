@@ -1,16 +1,18 @@
 import React from 'react'
 import styles from './ProductPage.module.scss'
-import { Link, useNavigate } from "react-router-dom";
+import ProductCard from '../../components/ProductCard/ProductCard';
 
 const ProductPage = ({ product }) => {
-    if (!product) {
-        return <div>Loading...</div>; // Or any other loading state representation
-    }
-
     return (
-        <div>
-            <p>This is the specific product {product.name}</p>
+        <main className={styles.main}>
+        <h1>Product</h1>
+        <div className={styles.container}>
+            <ProductCard key={product.id} product={product} />
         </div>
+      </main>
+
+
+
     );
 };
 

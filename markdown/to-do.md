@@ -1,31 +1,24 @@
 
-1) Fix the product data being passed down the the Product Page
+1) Pass the {product} object gracefully into all of the components
+
+2) Fix the toggle button to change the favourited property of the object
+
+3) Fix the favourited Page to display the cards properly
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 * Hide the database details in a .env file
 
 
-
-
-
-*** COMPONENTS
-
-
-Containers
-
-Navbar
-Products Container
-Favourites Container
-Cart Container
-
-
-
-
-
-Components
-
-ProductCard
-ProductById
-
-Shopping Cart
-Favourites
