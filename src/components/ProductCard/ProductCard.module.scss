@@ -3,11 +3,17 @@
     flex-direction: column;
     gap: 0.25em;
     width: 400px;
+    height: 650px;
     border: 2px solid black;
     align-items: center;
-    img {
-      width: 80%;
-      margin: auto;
-    }
+    background-color: whitesmoke;
+    border-radius: 10px;
   }
   
+
+  .imageStyle {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    border: 1px solid black;
+}

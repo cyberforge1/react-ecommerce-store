@@ -1,7 +1,17 @@
-.favorites {
-    background-color: yellow;
+.container {
+    background-color: whitesmoke;
+    border: 1px solid black;
     display: flex;
+    justify-content: space-around;
+    border: 1px solid black;
+    height: calc(100vh - 75px);
+    flex-wrap: wrap;
+}
+
+.contents {
+    display: flex;
+    gap: 40px;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+
 }

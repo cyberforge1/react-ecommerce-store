@@ -7,12 +7,15 @@ const ProductCard = ({product}) => {
   return (
     <article className={styles.card}>
     <h2>{product.name}</h2>
-    <img src={product.imageUrl} alt={product.name} />
+    <img 
+    src={product.imageUrl} 
+    alt={product.name}
+    className={styles.imageStyle} 
+    />
     <p>Price:{product.price}</p>
     <p>Quantity:{product.quantity}</p>
     <p>Variants:{product.variants[0]}</p>
-    {/* <FavoriteButton /> */}
-    <Link to={product.id}>See More</Link>
+    <Link to={`/products/${product.id}`}>See More</Link>
   </article>
   )
 }
