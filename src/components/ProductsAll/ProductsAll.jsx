@@ -14,13 +14,13 @@ const ProductsAll = () => {
     }, []);
 
     return (
-      <main className={styles.container}>
-      <div className={styles.container}>
+      <div>
+      <div className={styles.content}>
         {products.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
       </div>
-    </main>
+      </div>
   );
   };
 

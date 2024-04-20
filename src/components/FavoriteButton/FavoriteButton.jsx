@@ -1,42 +1,40 @@
-// import React, { useState, useEffect } from 'react';
-// import styles from './FavoriteButton.module.scss';
-// import { toggleFavorite } from '../../services/scripts';
-// import { getAllProducts } from '../../services/firebase-service';
+// FavoriteButton.jsx
+import React, { useState, useEffect } from 'react';
+import { doc, onSnapshot, updateDoc } from "firebase/firestore";
+import { db } from '../../config/firestore';
+import styles from './FavoriteButton.module.scss';
 
-// const FavoriteButton = () => {
+const FavoriteButton = ({ product, onFavoriteToggle }) => {
+    const [isToggled, setIsToggled] = useState(product.favourited);
 
-//     const [products, setProducts] = useState([]);
+    useEffect(() => {
+        const docRef = doc(db, "products", product.id);
+        const unsubscribe = onSnapshot(docRef, (doc) => {
+            if (doc.exists()) {
+                const newProductData = doc.data();
+                setIsToggled(newProductData.favourited);
+            }
+        });
 
-//   useEffect(() => {
-//     getAllProducts()
-//       .then((data) => setProducts(data))
-//       .catch((e) => console.warn(e.message));
-//   }, []);
+        return () => unsubscribe();
+    }, [product.id]);
 
+    const toggle = async () => {
+        const newFavourited = !isToggled;
+        console.log(`Toggling favorite for product ${product.id}: ${newFavourited}`);
+        const docRef = doc(db, "products", product.id);
+        await updateDoc(docRef, {
+            favourited: newFavourited
+        });
+        setIsToggled(newFavourited);
+        onFavoriteToggle(product.id, newFavourited);
+    };
 
+    return (
+        <button onClick={toggle} className={styles.button}>
+            {isToggled ? 'Unfavorite' : 'Favorite'}
+        </button>
+    );
+};
 
-
-//   // Use the product's initial 'favourited' state
-//   const [isToggled, setIsToggled] = useState(product.favourited);
-
-
-
-//   // Define a function to handle the toggle action
-//   const toggle = () => {
-//     // Call the toggleFavorite function to update the product's 'favourited' state
-//     toggleFavorite(product);
-//     // Update the local state to reflect the product's new 'favourited' state
-//     setIsToggled(product.favourited);
-//   };
-
-//   return (
-//     <button onClick={toggle} className={styles.button}>
-//       {isToggled ? 'Un-favorite' : 'Favorite'} {/* Display text based on state */}
-//     </button>
-//   );
-// }
-
-
-// export default FavoriteButton
-
-//update the DB (use snapshot)
+export default FavoriteButton;

@@ -1,11 +1,13 @@
 
-1) Pass the {product} object gracefully into all of the components
-
-2) Fix the toggle button to change the favourited property of the object
-
-3) Fix the favourited Page to display the cards properly
 
 
+1) Add the cart system
+
+2) Troubleshoot the favourite system error
+
+3) Add bootstrap for design and viewport size changes
+
+4) Change styling
 
 
 

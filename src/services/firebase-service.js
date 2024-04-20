@@ -32,4 +32,14 @@ import {
   };
 
 
+  export const toggleFavorite = async (product) => {
+    const docRef = doc(db, "products", product.id);
+    const newFavoritedState = !product.favourited;
+    await updateDoc(docRef, {
+        favourited: newFavoritedState
+    });
+    return newFavoritedState; // Return the new state to update local state
+};
+
+
   //const addProductToCard
