@@ -14,7 +14,7 @@ const ProductCard = ({ product, onFavoriteToggle }) => {
 
   return (
     <article className={styles.card}>
-      <h3>{product.name}</h3>
+      <h4>{product.name}</h4>
       <Link to={`/products/${product.id}`}>
       <img src={product.imageUrl} alt={product.name} className={styles.imageStyle}/>
       </Link>
