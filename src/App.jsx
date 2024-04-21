@@ -7,6 +7,7 @@ import ProductsPage from './pages/ProductsPage/ProductsPage.jsx';
 import CartPage from './pages/CartPage/CartPage.jsx';
 import ProductPage from './pages/ProductPage/ProductPage.jsx';
 import ProductLoader from './containers/ProductLoader/ProductLoader.jsx';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (

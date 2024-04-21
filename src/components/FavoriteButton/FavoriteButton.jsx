@@ -1,8 +1,7 @@
-// FavoriteButton.jsx
 import React, { useState, useEffect } from 'react';
 import { doc, onSnapshot, updateDoc } from "firebase/firestore";
 import { db } from '../../config/firestore';
-import styles from './FavoriteButton.module.scss';
+import 'bootstrap/dist/css/bootstrap.min.css'; // Ensure Bootstrap CSS is imported
 
 const FavoriteButton = ({ product, onFavoriteToggle }) => {
     const [isToggled, setIsToggled] = useState(product.favourited);
@@ -11,8 +10,7 @@ const FavoriteButton = ({ product, onFavoriteToggle }) => {
         const docRef = doc(db, "products", product.id);
         const unsubscribe = onSnapshot(docRef, (doc) => {
             if (doc.exists()) {
-                const newProductData = doc.data();
-                setIsToggled(newProductData.favourited);
+                setIsToggled(doc.data().favourited);
             }
         });
 
@@ -21,18 +19,17 @@ const FavoriteButton = ({ product, onFavoriteToggle }) => {
 
     const toggle = async () => {
         const newFavourited = !isToggled;
-        console.log(`Toggling favorite for product ${product.id}: ${newFavourited}`);
         const docRef = doc(db, "products", product.id);
-        await updateDoc(docRef, {
-            favourited: newFavourited
-        });
+        await updateDoc(docRef, { favourited: newFavourited });
         setIsToggled(newFavourited);
         onFavoriteToggle(product.id, newFavourited);
     };
 
+    // Styling update here: added btn-outline-dark for a more neutral, stylish look
+    // and btn-lg for a larger button that's easier to interact with
     return (
-        <button onClick={toggle} className={styles.button}>
-            {isToggled ? 'Unfavorite' : 'Favorite'}
+        <button onClick={toggle} className={`btn ${isToggled ? 'btn-success' : 'btn-outline-dark'}`}>
+            {isToggled ? '♥ Unfavorite' : '♡ Favorite'}
         </button>
     );
 };

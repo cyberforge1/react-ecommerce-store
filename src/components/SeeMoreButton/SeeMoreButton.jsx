@@ -1,12 +1,12 @@
-import React from 'react'
-import styles from './SeeMoreButton.module.scss'
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const SeeMoreButton = () => {
   return (
     <div>
-    <button className={styles.button}>See More</button>
-  </div>
-  )
+      <button className="btn btn-primary">See More</button>
+    </div>
+  );
 }
 
-export default SeeMoreButton
+export default SeeMoreButton;
