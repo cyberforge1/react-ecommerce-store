@@ -23,7 +23,11 @@ const SingleProduct = ({ product, onFavoriteToggle }) => {
             <div className={styles.textCard}>
                 <h2>{product.name}</h2>
                 <p>Price: ${product.price}</p>
-                <p>Quantity: {quantity}</p>  // Display updated quantity
+                {quantity === 0 ? (
+                    <p className={styles.error}>Out of Stock</p>  // Display error message if quantity is 0
+                ) : (
+                    <p>Quantity: {quantity}</p>  // Display updated quantity
+                )}
                 <p>Variants: {product.variants[0]}</p>
                 <FavoriteButton product={product} onFavoriteToggle={onFavoriteToggle} />
                 <AddToCartButton productId={product.id} onDecreaseQuantity={handleDecreaseQuantity} />

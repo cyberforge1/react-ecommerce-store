@@ -33,3 +33,9 @@
     object-fit: contain;  // Ensures the entire image is visible without cropping
     object-position: center center;  // Centers the image within its container
 }
+
+
+.error {
+    color: red;
+    font-weight: bold;
+}

@@ -4,14 +4,6 @@
 * Add the cart system
 
 
-* Product Page Button
-    * when this button is clicked it should perform a number of actions:
-        * increasing the quantity of the product document in the cart collection by one (adjust in database and also hold in state?)
-        * decrement the quantity of that item in the products collection by one (adjust in database and also hold in state?)
-
-    * figure out how to use the cart collection in firestore to set the properties from the products collection 
-        * Add Id's manually to firestore db
-
     * Cart Page
         * if the quantity not equal to 0 display to card page
         * create component to display product details in cart
@@ -45,6 +37,8 @@
 * Look at the number of fetch requests
 
 * Add Loading spinner and functionality
+
+* Generate new photos for products
 
 
 
