@@ -1,0 +1,35 @@
+.container {
+    border: 1px solid yellow;
+    width: 800px;
+    height: 400px;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.imgCard {
+    border: 1px solid black;
+    width: 50%;
+    height: 100%;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;  // Optional, in case you want to make sure nothing spills out if there's an unexpected issue
+}
+
+.textCard {
+    border: 1px solid black;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Ensures horizontal centering of all child elements */
+}
+
+.imageStyle {
+    width: 100%;  // Makes sure the image attempts to fill the width,
+    height: 100%; // and height of its container
+    object-fit: contain;  // Ensures the entire image is visible without cropping
+    object-position: center center;  // Centers the image within its container
+}

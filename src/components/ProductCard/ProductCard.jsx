@@ -3,6 +3,7 @@ import React from 'react';
 import styles from './ProductCard.module.scss';
 import { Link } from "react-router-dom";
 import FavoriteButton from '../FavoriteButton/FavoriteButton';
+import SeeMoreButton from '../SeeMoreButton/SeeMoreButton';
 
 const ProductCard = ({ product, onFavoriteToggle }) => {
   return (
@@ -13,7 +14,9 @@ const ProductCard = ({ product, onFavoriteToggle }) => {
       <p>Quantity: {product.quantity}</p>
       <p>Variants: {product.variants[0]}</p>
       <FavoriteButton product={product} onFavoriteToggle={onFavoriteToggle} />
-      <Link to={`/products/${product.id}`}>See More</Link>
+      <Link to={`/products/${product.id}`}>
+        <SeeMoreButton />
+      </Link>
     </article>
   );
 };
