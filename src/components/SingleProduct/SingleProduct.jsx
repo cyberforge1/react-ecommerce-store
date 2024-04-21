@@ -15,6 +15,11 @@ const SingleProduct = ({ product, onFavoriteToggle }) => {
         }
     };
 
+    const handleVariantChange = (event) => {
+        console.log("Selected Variant:", event.target.value);
+        // You can handle state updates or additional logic here
+      };
+
     return (
         <div className={styles.container}>
             <div className={styles.imgCard}>
@@ -28,7 +33,14 @@ const SingleProduct = ({ product, onFavoriteToggle }) => {
                 ) : (
                     <p>Quantity: {quantity}</p>  // Display updated quantity
                 )}
-                <p>Variants: {product.variants[0]}</p>
+                      <div>
+                        <label htmlFor="variant-select">Variants: </label>
+                        <select id="variant-select" onChange={handleVariantChange}>
+                        {product.variants.map((variant, index) => (
+                            <option key={index} value={variant}>{variant}</option>
+                        ))}
+                        </select>
+                    </div>
                 <FavoriteButton product={product} onFavoriteToggle={onFavoriteToggle} />
                 <AddToCartButton productId={product.id} onDecreaseQuantity={handleDecreaseQuantity} />
             </div>

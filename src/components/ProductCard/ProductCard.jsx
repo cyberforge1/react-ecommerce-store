@@ -7,21 +7,33 @@ import SeeMoreButton from '../SeeMoreButton/SeeMoreButton';
 import AddToCartButton from '../AddToCartButton/AddToCartButton';
 
 const ProductCard = ({ product, onFavoriteToggle }) => {
-
+  const handleVariantChange = (event) => {
+    console.log("Selected Variant:", event.target.value);
+    // You can handle state updates or additional logic here
+  };
 
   return (
     <article className={styles.card}>
-      <h2>{product.name}</h2>
+      <h3>{product.name}</h3>
       <Link to={`/products/${product.id}`}>
       <img src={product.imageUrl} alt={product.name} className={styles.imageStyle}/>
       </Link>
       <p>Price: ${product.price}</p>
       <p>Quantity: {product.quantity}</p>
-      <p>Variants: {product.variants[0]}</p>
-      <FavoriteButton product={product} onFavoriteToggle={onFavoriteToggle} />
-      <Link to={`/products/${product.id}`}>
-        <SeeMoreButton />
-      </Link>
+      <div>
+        <label htmlFor="variant-select">Variants: </label>
+        <select id="variant-select" onChange={handleVariantChange}>
+          {product.variants.map((variant, index) => (
+            <option key={index} value={variant}>{variant}</option>
+          ))}
+        </select>
+      </div>
+      <div className={styles.buttonContainer}>
+                <FavoriteButton product={product} onFavoriteToggle={onFavoriteToggle} />
+                <Link to={`/products/${product.id}`} className={styles.linkButton}>
+                    <SeeMoreButton />
+                </Link>
+            </div>
     </article>
   );
 };

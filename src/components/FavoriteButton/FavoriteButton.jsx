@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { doc, onSnapshot, updateDoc } from "firebase/firestore";
 import { db } from '../../config/firestore';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Ensure Bootstrap CSS is imported
+import styles from './FavoriteButton.module.scss'
 
 const FavoriteButton = ({ product, onFavoriteToggle }) => {
     const [isToggled, setIsToggled] = useState(product.favourited);
@@ -28,9 +29,9 @@ const FavoriteButton = ({ product, onFavoriteToggle }) => {
     // Styling update here: added btn-outline-dark for a more neutral, stylish look
     // and btn-lg for a larger button that's easier to interact with
     return (
-        <button onClick={toggle} className={`btn ${isToggled ? 'btn-success' : 'btn-outline-dark'}`}>
-            {isToggled ? '♥ Unfavorite' : '♡ Favorite'}
-        </button>
+        <button onClick={toggle} className={`btn ${styles.button} ${isToggled ? 'btn-success' : 'btn-outline-primary'}`}>
+        {isToggled ? '♥ Unfavorite' : '♡ Favorite'}
+    </button>
     );
 };
 

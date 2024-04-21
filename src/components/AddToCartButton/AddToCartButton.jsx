@@ -26,8 +26,10 @@ const AddToCartButton = ({ productId, onDecreaseQuantity }) => {
 
     return (
         <div>
-            <button className={styles.button} onClick={handleClick}>Add to Cart</button>
-        </div>
+        <button onClick={handleClick} className="btn btn-warning btn-lg">
+            🛒 Add to Cart
+        </button>
+    </div>
     );
 }
 

@@ -26,8 +26,8 @@ const Carousel = ({ slides }) => {
           </div>
         ))}
       </div>
-      <button className={styles.button} onClick={prevSlide}>Prev</button>
-      <button className={styles.button} onClick={nextSlide}>Next</button>
+      <button className={styles.button} onClick={prevSlide}>←</button>
+      <button className={styles.button} onClick={nextSlide}>→</button>
     </div>
   );
 }
