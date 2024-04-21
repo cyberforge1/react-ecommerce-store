@@ -1,21 +1,22 @@
 .card {
-    display: flex;
-    flex-direction: column;
-    gap: 0.25em;
-    width: 400px;
-    border: 2px solid black;
-    align-items: center;
-    background-color: whitesmoke;
-    border-radius: 10px;
-    margin-top: 30px;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  gap: 0.25em;
+  width: 400px;
+  border: 2px solid black;
+  align-items: center;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  margin-top: 30px;
+  padding-top: 20px;  // Adds padding at the top of the card
+  padding-bottom: 10px;  // Adds padding at the bottom of the card
+}
 
-  .imageStyle {
-    width: 300px;
-    height: 300px;
-    border-radius: 10px;
-    border: 1px solid black;
+.imageStyle {
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+  border: 1px solid black;
 }
 
 .buttonContainer {
@@ -23,6 +24,7 @@
   justify-content: space-around;
   width: 100%;
   align-items: end;
+  margin-bottom: 10px;  // Adds margin at the bottom to push it away from the card's edge
 }
 
 #variant-select {

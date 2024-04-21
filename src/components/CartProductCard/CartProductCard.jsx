@@ -38,16 +38,17 @@ const CartProductCard = ({ product, onUpdate }) => {
 
     return (
         <div className={styles.card}>
-            <img src={product.imageUrl} alt={product.name} className={styles.image}/>
+            <div className={styles.imageContainer}>
+                <img src={product.imageUrl} alt={product.name} className={styles.image}/>
+            </div>
             <div className={styles.info}>
                 <h2>{product.name}</h2>
-                <p>Price: ${product.price}</p>
                 <p>Quantity in Cart: {product.quantityInCart}</p>
-                <p>Total Stock: {product.quantity}</p>
-                <p>Variants: {product.variants.join(", ")}</p>
-                <button onClick={handleIncrement}>Add One More</button>
-                <button onClick={handleDecrement}>Remove One</button>
-                <button onClick={handleRemoveAll}>Remove All from Cart</button>
+                <div className={styles.buttons}>
+                    <button onClick={handleIncrement} className="btn btn-success">+</button>
+                    <button onClick={handleDecrement} className="btn btn-warning">-</button>
+                    <button onClick={handleRemoveAll} className="btn btn-danger">🗑</button>
+                </div>
                 <Link to={`/products/${product.id}`}>View Product</Link>
             </div>
         </div>
@@ -55,3 +56,4 @@ const CartProductCard = ({ product, onUpdate }) => {
 };
 
 export default CartProductCard;
+

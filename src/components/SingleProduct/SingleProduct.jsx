@@ -1,5 +1,3 @@
-// SingleProduct.jsx
-
 import React, { useState } from 'react';
 import styles from './SingleProduct.module.scss';
 import { Link } from "react-router-dom";
@@ -29,20 +27,22 @@ const SingleProduct = ({ product, onFavoriteToggle }) => {
                 <h2>{product.name}</h2>
                 <p>Price: ${product.price}</p>
                 {quantity === 0 ? (
-                    <p className={styles.error}>Out of Stock</p>  // Display error message if quantity is 0
+                    <p className={styles.error}>Out of Stock</p>
                 ) : (
-                    <p>Quantity: {quantity}</p>  // Display updated quantity
+                    <p>Quantity: {quantity}</p>
                 )}
-                      <div>
-                        <label htmlFor="variant-select">Variants: </label>
-                        <select id="variant-select" onChange={handleVariantChange}>
+                <div>
+                    <label htmlFor="variant-select">Variants: </label>
+                    <select id="variant-select" onChange={handleVariantChange}>
                         {product.variants.map((variant, index) => (
                             <option key={index} value={variant}>{variant}</option>
                         ))}
-                        </select>
-                    </div>
-                <FavoriteButton product={product} onFavoriteToggle={onFavoriteToggle} />
-                <AddToCartButton productId={product.id} onDecreaseQuantity={handleDecreaseQuantity} />
+                    </select>
+                </div>
+                <div className={styles.buttonGroup}>
+                    <FavoriteButton product={product} onFavoriteToggle={onFavoriteToggle} />
+                    <AddToCartButton productId={product.id} onDecreaseQuantity={handleDecreaseQuantity} />
+                </div>
             </div>
         </div>
     );

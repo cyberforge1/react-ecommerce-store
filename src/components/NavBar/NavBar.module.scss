@@ -1,31 +1,40 @@
 .nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    padding-left: 1em;
-    gap: 1em;
-    height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding-left: 1em;
+  gap: 0.5em;
+  height: 50px;
+}
+
+.link {
+  text-decoration: none;
+  color: #ffffff; // White color text
+  font-size: 20px; // Larger text
+
+  &:visited {
+    color: #ffffff; // Keeps the color white even if visited
   }
-  
-  .link {
-    text-decoration: none;
-    color: #5252fb;
+
+  &:hover {
+    color: #ffffff; // Keeps the color white on hover
+    transform: scale(1.1); // Magnifies the text a bit when hovered
+    transition: transform 0.3s ease; // Smooth transition for magnification
+  }
+
+  &_active {
+    color: #ffffff; // Keeps the color white when active
+    text-decoration: underline;
+
     &:visited {
-      color: #5252fb;
+      color: #ffffff;
     }
+
     &:hover {
-      color: #f7bb4c;
-    }
-    &_active {
-      color: #52b7fb;
-      text-decoration: underline;
-      &:visited {
-        color: #52b7fb;
-      }
-      &:hover {
-        color: #f7bb4c;
-      }
+      color: #ffffff;
+      transform: scale(1.1); // Same magnification effect on hover
+      transition: transform 0.3s ease;
     }
   }
-  
+}

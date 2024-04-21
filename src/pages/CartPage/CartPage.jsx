@@ -25,7 +25,7 @@ const CartPage = () => {
 
     return (
         <div className={styles.container}>
-            <h1>Shopping Cart</h1>
+            <h2>Shopping Cart</h2>
             <div className={styles.content}>
                 {cartItems.length > 0 ? (
                     cartItems.map(item => (

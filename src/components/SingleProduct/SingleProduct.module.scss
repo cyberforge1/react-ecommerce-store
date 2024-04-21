@@ -1,21 +1,27 @@
 .container {
-    border: 1px solid yellow;
+    border: 2px solid black;
     width: 800px;
     height: 400px;
     display: flex; 
     justify-content: center;
     align-items: center;
+    background-color: whitesmoke;  // Matching background color with ProductCard
+    border-radius: 10px;  // Rounded corners like ProductCard
+    margin-top: 30px;  // Consistent margin
 }
 
 .imgCard {
     border: 1px solid black;
-    width: 50%;
-    height: 100%;
-    display: flex; 
+    width: 50%;  // Adjusted to take half of the container's width
+    height: 100%;  // Adjusted to take full height of the container
+    display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;  // Optional, in case you want to make sure nothing spills out if there's an unexpected issue
+    overflow: hidden;  // Keeps any overflowing parts of the image from being visible
+    border-radius: 10px;  // Optional for rounded corners
+    position: relative;  // Ensures the positioning context is set for the image
 }
+
 
 .textCard {
     border: 1px solid black;
@@ -23,17 +29,24 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center; /* Ensures horizontal centering of all child elements */
+    justify-content: space-between;  // Adjusted for internal spacing
+    align-items: center;
+    padding: 20px;  // Padding for internal spacing
+    border-radius: 10px;  // Consistency in rounding corners
 }
 
 .imageStyle {
-    width: 100%;  // Makes sure the image attempts to fill the width,
-    height: 100%; // and height of its container
-    object-fit: contain;  // Ensures the entire image is visible without cropping
-    object-position: center center;  // Centers the image within its container
+    width: 100%;  // Forces the image to expand to fill the width
+    height: 100%;  // Forces the image to expand to fill the height
+    object-fit: cover;  // Covers the area, clips the excess, maintains aspect ratio
+    object-position: center center;  // Centers the image in both dimensions
 }
 
+.buttonGroup {
+    display: flex;
+    justify-content: space-around;  // This places the buttons with space in between
+    width: 100%;  // Ensures the buttons are spaced over the full width of the text card
+}
 
 .error {
     color: red;
