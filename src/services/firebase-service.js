@@ -1,3 +1,5 @@
+//firebase-service.js
+
 import {
     addDoc,
     collection,
@@ -9,6 +11,8 @@ import {
     updateDoc,
   } from "firebase/firestore";
   import { db } from "../config/firestore.js";
+
+
 
   export const getAllProducts = async () => {
     const collectionRef = collection(db, "products");
@@ -43,3 +47,18 @@ import {
 
 
   //const addProductToCard
+
+
+  // Function to decrease the quantity of a product by one
+  export const decreaseProductQuantity = async (id) => {
+    const docRef = doc(db, "products", id);
+    const snapshot = await getDoc(docRef);
+    const currentQuantity = snapshot.data().quantity;
+    if (currentQuantity > 0) {
+        await updateDoc(docRef, {
+            quantity: currentQuantity - 1
+        });
+    } else {
+        console.log("No more products in stock");
+    }
+};

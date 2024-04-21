@@ -3,10 +3,6 @@
 
 * Add the cart system
 
-* Product Page
-    * create components for single object page 
-    * implement single object page and add to cart button
-
 
 * Product Page Button
     * when this button is clicked it should perform a number of actions:
