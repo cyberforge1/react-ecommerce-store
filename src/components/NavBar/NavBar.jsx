@@ -1,6 +1,6 @@
 import styles from "./NavBar.module.scss";
 import { NavLink } from "react-router-dom";
-import 'bootstrap/dist/css/bootstrap.min.css'; // Ensure Bootstrap CSS is imported
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const NavBar = () => {
   const linkStyles = ({ isActive }) =>

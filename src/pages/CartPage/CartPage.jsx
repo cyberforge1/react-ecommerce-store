@@ -9,7 +9,7 @@ const CartPage = () => {
     useEffect(() => {
         const fetchCartItems = async () => {
             const items = await getCartProducts();
-            setCartItems(items.filter(item => item.quantityInCart > 0));  // Initially filter out items with zero quantity
+            setCartItems(items.filter(item => item.quantityInCart > 0));
         };
 
         fetchCartItems();
@@ -19,7 +19,7 @@ const CartPage = () => {
         setCartItems(currentItems => 
             currentItems.map(item => 
                 item.id === productId ? {...item, quantityInCart: newQuantityInCart, quantity: newTotalQuantity} : item
-            ).filter(item => item.quantityInCart > 0)  // Remove items with zero quantity from the UI
+            ).filter(item => item.quantityInCart > 0)
         );
     };
 

@@ -9,7 +9,6 @@ import AddToCartButton from '../AddToCartButton/AddToCartButton';
 const ProductCard = ({ product, onFavoriteToggle }) => {
   const handleVariantChange = (event) => {
     console.log("Selected Variant:", event.target.value);
-    // You can handle state updates or additional logic here
   };
 
   return (

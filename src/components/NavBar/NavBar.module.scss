@@ -10,21 +10,21 @@
 
 .link {
   text-decoration: none;
-  color: #ffffff; // White color text
-  font-size: 70px; // Larger text
+  color: #ffffff;
+  font-size: 70px;
 
   &:visited {
-    color: #ffffff; // Keeps the color white even if visited
+    color: #ffffff;
   }
 
   &:hover {
-    color: #ffffff; // Keeps the color white on hover
-    transform: scale(1.1); // Magnifies the text a bit when hovered
-    transition: transform 0.3s ease; // Smooth transition for magnification
+    color: #ffffff;
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
   }
 
   &_active {
-    color: #ffffff; // Keeps the color white when active
+    color: #ffffff;
     text-decoration: underline;
 
     &:visited {
@@ -33,7 +33,7 @@
 
     &:hover {
       color: #ffffff;
-      transform: scale(1.1); // Same magnification effect on hover
+      transform: scale(1.1);
       transition: transform 0.3s ease;
     }
   }

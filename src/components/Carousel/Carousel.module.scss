@@ -5,14 +5,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    overflow: hidden; // Added to hide the non-active slides
+    overflow: hidden;
     position: relative;
 }
 
 .carouselInner {
     display: flex;
     transition: transform 0.5s ease;
-    width: 100%; // Ensure this is here to manage layout correctly
+    width: 100%;
 }
 
 .carouselItem {
@@ -20,7 +20,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center; // Center content within each slide
+    align-items: center;
     
 }
 
@@ -28,7 +28,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center top;  // Aligns the top of the image with the top of the container
+    object-position: center top;
     display: block;
 }
 
@@ -44,9 +44,9 @@
 }
 
 .button:first-child {
-    left: 0; // Ensures the "Prev" button is at the very left
+    left: 0;
 }
 
 .button:last-child {
-    right: 0; // Ensures the "Next" button is at the very right
+    right: 0;
 }

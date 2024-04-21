@@ -5,16 +5,16 @@ const Carousel = ({ slides }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length); // Cycle to next slide
+    setCurrentSlide((prev) => (prev + 1) % slides.length);
   };
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length); // Cycle to previous slide
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
   };
 
   useEffect(() => {
-    const timer = setInterval(nextSlide, 3000); // Auto-slide every 3 seconds
-    return () => clearInterval(timer); // Clean-up the interval on unmount
+    const timer = setInterval(nextSlide, 3000);
+    return () => clearInterval(timer);
   }, [slides.length]);
 
   return (

@@ -8,12 +8,12 @@
   border-radius: 10px;
   margin-top: 30px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  justify-content: center; /* Centers children horizontally in the flex container */
-  align-items: center; /* Centers children vertically in the flex container */
+  justify-content: center;
+  align-items: center;
 }
 
 .imageContainer {
-  width: 220px; /* Consistent with previous size adjustments */
+  width: 220px;
   height: 220px;
   display: flex;
   justify-content: center;
@@ -48,26 +48,26 @@ h2, p {
 }
 
 button {
-  padding: 10px 20px; /* Comfortable padding */
-  border: none; /* Removes default border */
-  border-radius: 5px; /* Rounded corners */
-  background-color: #007BFF; /* A pleasant blue shade */
-  color: white; /* White text for contrast */
-  text-transform: uppercase; /* Makes text uppercase for better readability */
-  font-weight: bold; /* Bold text for prominence */
-  cursor: pointer; /* Changes cursor to pointer to indicate clickable item */
-  box-shadow: 2px 2px 10px rgba(0,0,0,0.1); /* Subtle shadow for 3D effect */
-  transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transitions for hover effects */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007BFF;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+  transition: background-color 0.3s, box-shadow 0.3s;
 }
 
 button:hover {
-  background-color: #0056b3; /* Darker shade of blue on hover */
-  box-shadow: 2px 2px 15px rgba(0,0,0,0.2); /* Slightly larger shadow on hover for lifting effect */
+  background-color: #0056b3;
+  box-shadow: 2px 2px 15px rgba(0,0,0,0.2);
 }
 
 button:active {
-  background-color: #004085; /* Even darker blue to simulate press */
-  box-shadow: 1px 1px 5px rgba(0,0,0,0.2); /* Smaller shadow to simulate being pressed down */
+  background-color: #004085; 
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
 }
 
 a {
