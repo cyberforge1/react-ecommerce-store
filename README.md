@@ -40,7 +40,6 @@ This project uses React.js for the frontend framework, Firestore for data manage
 The codebase is structured around React components for each page and feature, Firestore queries for data handling, and routing managed by react-router-dom. Components are designed to be reusable and modular.
 
 # Issues / Bugs
-Currently, there are no major bugs reported. Minor issues include delayed updates from Firestore which occasionally causes discrepancies in stock levels.
 
 # Potential Additions
 - New product photos to enhance visual appeal and update product listings.
