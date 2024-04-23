@@ -28,7 +28,7 @@ const FavoriteButton = ({ product, onFavoriteToggle }) => {
 
     return (
         <button onClick={toggle} className={`btn ${styles.button} ${isToggled ? 'btn-success' : 'btn-outline-primary'}`}>
-        {isToggled ? '♥ Unfavorite' : '♡ Favorite'}
+        {isToggled ? '♥' : '♡'}
     </button>
     );
 };

@@ -6,33 +6,34 @@
   padding-left: 1em;
   gap: 0.5em;
   height: 50px;
+  color: black;
 }
 
 .link {
   text-decoration: none;
-  color: #ffffff;
+  color: black; 
   font-size: 70px;
 
   &:visited {
-    color: #ffffff;
+    color: black; 
   }
 
   &:hover {
-    color: #ffffff;
+    color: black; 
     transform: scale(1.1);
     transition: transform 0.3s ease;
   }
 
   &_active {
-    color: #ffffff;
+    color: black; 
     text-decoration: underline;
 
     &:visited {
-      color: #ffffff;
+      color: black; 
     }
 
     &:hover {
-      color: #ffffff;
+      color: black; 
       transform: scale(1.1);
       transition: transform 0.3s ease;
     }
