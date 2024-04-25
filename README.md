@@ -6,7 +6,8 @@ This React-based e-commerce application allows users to view, add, and manage pr
 # Screenshots
 
 ![Home Page](./public/home-page.png)
-![Favorites Page](./public/favorites-page.png)
+
+
 ![Cart Page](./public/cart-page.png)
 
 
