@@ -3,7 +3,12 @@
 # Project Overview
 This React-based e-commerce application allows users to view, add, and manage products in a shopping cart using Firestore to store product data. The project focuses on using React framework features like react-router-dom and Firestore integration to build a dynamic e-shop.
 
-# Screenshot
+# Screenshots
+
+![Home Page](./public/home-page.png)
+![Favorites Page](./public/favorites-page.png)
+![Cart Page](./public/cart-page.png)
+
 
 # Table of Contents
 - Goals
