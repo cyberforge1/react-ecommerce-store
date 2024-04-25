@@ -1,4 +1,4 @@
-# README BLUEPRINT
+# React E-Commerce Shop
 
 # Project Overview
 This React-based e-commerce application allows users to view, add, and manage products in a shopping cart using Firestore to store product data. The project focuses on using React framework features like react-router-dom and Firestore integration to build a dynamic e-shop.
