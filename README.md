@@ -37,11 +37,6 @@ The primary goal is to build a reactive e-shop website to demonstrate the abilit
 - React Router DOM
 - Google Firestore
 
-
-## Build Steps
-1. How to build/run the project
-
-
 ## How to use
 To start exploring the e-shop, visit the homepage where you can browse products, view details, and add items to your cart. Use the navigation links to switch between different views and manage your cart.
 
