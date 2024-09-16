@@ -32,10 +32,10 @@ The primary goal is to build a reactive e-shop website to demonstrate the abilit
 - HTML
 - CSS/SCSS
 - JavaScript
-- Git
 - React
 - React Router DOM
 - Google Firestore
+- Midjourney AI Image Generation
 
 ## How to use
 To start exploring the e-shop, visit the homepage where you can browse products, view details, and add items to your cart. Use the navigation links to switch between different views and manage your cart.
@@ -65,10 +65,10 @@ To start exploring the e-shop, visit the homepage where you can browse products,
 - Integration of a Firestore database
 - Creating JavaScript database seeding scripts
 - Dynamic filtering and searching of data on page 
+- JavaScript -> Firestore database seeding scripts
 
 
 ## Challenges
-- Database seeding 
 - Building carousel 
 - Fetching product data
 
