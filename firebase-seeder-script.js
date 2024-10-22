@@ -1,5 +1,5 @@
-const admin = require('firebase-admin');
-const serviceAccount = require('./path/to/your-service-account-file.json');
+import admin from 'firebase-admin';
+import serviceAccount from './path/to/your-service-account-file.json';
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
@@ -35,3 +35,5 @@ products.forEach(async (product) => {
     console.error('Error adding product:', error);
   }
 });
+
+
