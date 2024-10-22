@@ -12,7 +12,7 @@ import { promises as fs } from "fs";
 //     messagingSenderId: "XXXXXXXXXXXXXXXX",
 //     appId: "XXXXXXXXXXXXXXXX"
 //   };
-
+  
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
