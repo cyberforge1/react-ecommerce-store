@@ -2,8 +2,7 @@
 
 
 ## Project Overview
-This project showcases a fully functional e-commerce website using React, designed to enhance my understanding and skills in web development. It leverages Firestore for data management and react-router-dom for seamless navigation.
-
+An e-commerce store for alpine clothing and equipment with dynamic functionality. Built with React, Google Firestore, React Router, SCSS, and Midjourney AI.
 
 ## Deployment Link
 This e-shop is live! Check it out [here](https://react-ecommerce-store-project.netlify.app/).
