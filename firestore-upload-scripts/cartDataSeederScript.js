@@ -14,7 +14,6 @@ import { fileURLToPath } from "url";
 //     appId: "XXXXXXXXXXXXXXXX"
 //   };
 
-
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
